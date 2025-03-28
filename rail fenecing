@@ -1,0 +1,7 @@
+m = "hello"
+rails = 2
+x = ''.join(m[i::rails] for i in range(rails))
+print("Cipher text:", x)
+mid = (len(m) + 1) // 2
+y = ''.join(x[i//2] if i % 2 == 0 else x[mid + i//2] for i in range(len(m)))
+print("Decrypted text:", y)
