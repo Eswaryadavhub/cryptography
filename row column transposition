@@ -1,0 +1,8 @@
+import math
+m = "hello"
+key = math.ceil(len(m) ** 0.5)
+x = ''.join(m[i::key] for i in range(key))
+cols = math.ceil(len(x) / key)
+y = ''.join(x[i::cols] for i in range(cols))
+print("Cipher text:", x)
+print("Decrypted text:", y)
