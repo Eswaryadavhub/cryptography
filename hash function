@@ -1,0 +1,4 @@
+import hashlib
+m = "hello"
+h = hashlib.sha1(m.encode()).hexdigest()
+print("The hexadecimal equivalent of SHA-1 is:", h)
