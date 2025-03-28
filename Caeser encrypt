@@ -1,0 +1,10 @@
+text="hello world"
+shift = 1 
+cipher_text=""
+for c in text:
+    if c.isalpha():
+        c=c.upper()
+        cipher_text+=chr((ord(c)-65+shift)%26+65)
+    else:
+        cipher_text+=c
+print(cipher_text)
