@@ -1,0 +1,9 @@
+cipher_text = "IFMMP FWFSZPOF"
+shift = 1
+decrypted_text = ""
+for c in cipher_text:
+    if c.isalpha():
+        decrypted_text += chr((ord(c) - 65 - shift + 26) % 26 + 65)
+    else:
+        decrypted_text += c
+print("Decrypted text:", decrypted_text)
