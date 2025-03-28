@@ -1,0 +1,6 @@
+m= "hello123"
+k= "key12345"
+e = "".join(chr(ord(m[i]) ^ ord(k[i % len(k)])) for i in range(len(m)))
+d = "".join(chr(ord(e[i]) ^ ord(k[i % len(k)])) for i in range(len(e)))
+print("Cipher Text:", "".join(f"{ord(c):02x}" for c in e))
+print("Decrypted:", d)
