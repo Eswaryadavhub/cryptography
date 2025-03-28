@@ -1,0 +1,8 @@
+import string
+p = string.ascii_lowercase
+key = "key"
+m = "hello"
+x = ''.join(p[(ord(m[i]) - 97 + ord(key[i % len(key)]) - 97) % 26] for i in range(len(m)))
+y = ''.join(p[(ord(x[i]) - 97 - (ord(key[i % len(key)]) - 97)) % 26] for i in range(len(x)))
+print("Cipher text:", x)
+print("Decrypted text:", y)
