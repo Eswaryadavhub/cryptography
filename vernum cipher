@@ -1,0 +1,7 @@
+import random
+m = "hello"
+key = ''.join(chr(random.randint(0, 255)) for _ in m)
+x = ''.join(chr(ord(m[i]) ^ ord(key[i])) for i in range(len(m)))
+y = ''.join(chr(ord(x[i]) ^ ord(key[i])) for i in range(len(m)))
+print("Cipher text:", x.encode())
+print("Decrypted text:", y)
