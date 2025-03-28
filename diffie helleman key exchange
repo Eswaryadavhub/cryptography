@@ -1,0 +1,12 @@
+import random
+p = 21  
+g = 6
+a = random.randint(1, p-1)  
+b = random.randint(1, p-1)  
+A = (g ** a) % p  
+B = (g ** b) % p  
+key_A = (B ** a) % p  
+key_B = (A ** b) % p  
+print("Shared Key (Alice):", key_A)
+print("Shared Key (Bob):", key_B)
+assert key_A == key_B, "Key exchange failed!"
