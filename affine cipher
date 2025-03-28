@@ -1,0 +1,9 @@
+import string
+p = string.ascii_lowercase
+a, b = 5, 8
+m = "hello"
+x = ''.join(p[(a * (ord(m[i]) - 97) + b) % 26] for i in range(len(m)))
+a_inv = pow(a, -1, 26)
+y = ''.join(p[(a_inv * (ord(x[i]) - 97 - b)) % 26] for i in range(len(x)))
+print("Cipher text:", x)
+print("Decrypted text:", y)
