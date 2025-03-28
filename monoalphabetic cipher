@@ -1,0 +1,10 @@
+import string
+p = string.ascii_lowercase
+c = p[::-1]
+e = dict(zip(p, c))
+d = dict(zip(c, p))
+m = "hello"
+x = ''.join(e.get(i, i) for i in m.lower())
+y = ''.join(d.get(i, i) for i in x)
+print("cipher_text:",x)
+print("normal_text:",y)
