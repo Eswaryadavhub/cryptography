@@ -1,0 +1,5 @@
+git clone htpps
+git checkout -b aset
+git push origin aset
+git pull origin main
+https            /pulls
